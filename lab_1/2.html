@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timetable</title>
+
+    <style>
+        table, tr, td, th {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
     <table>
@@ -22,9 +28,9 @@
         <tr>
             <td>9:00 - 9:55</td>
 
-            <td>Матан</td>
+            <td rowspan="2">Матан</td>
             <td>Прога</td>
-            <td>Базы данных</td>
+            <td rowspan="2">Базы данных</td>
             <td>Физика</td>
             <td>Физ-ра</td>
         </tr>
@@ -32,41 +38,33 @@
         <tr>
             <td>10:00 - 10:55</td>
 
-            <td>Матан</td>
             <td>Психология</td>
-            <td>Базы данных</td>
-            <td></td>
-            <td></td>
+            <td rowspan="2">Электротехника</td>
+            <td>Английский</td>
         </tr>
 
         <tr>
             <td>11:00 - 11:55</td>
 
             <td>Физика</td>
-            <td>Геометрия</td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Начерт</td>
+            <td>Правоведение</td>
+            <td>Матан</td>
         </tr>
 
         <tr>
             <td>12:00 - 12:55</td>
 
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td colspan="2">Самостоятельная работа</td>
+            <td>Электротехника</td>
+            <td>Физика</td>
+            <td>Начерт</td>
         </tr>
 
         <tr>
             <td>13:00 - 13:55</td>
 
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td colspan="5">Самостоятельная работа</td>
         </tr>
         
     </table>
