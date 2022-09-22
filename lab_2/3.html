@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICS6 Bootstrap</title>
+    <link href="http://e-learning.bmstu.ru/iu6/pluginfile.php/7546/mod_folder/content/0/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        body {
+            margin-bottom: 40px;
+        }
+
+        main {
+            margin-top: 15px;
+        }
+
+        footer {
+            height: 40px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .my-primary {
+            background-color: skyblue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark my-primary">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="row">
+            <div class="col-4">
+                <img src=" http://e-learning.bmstu.ru/iu6/pluginfile.php/7546/mod_folder/content/0/avatar.jpg" alt="avatar" width="150" height="150">
+            </div>
+            <div class="col-8">
+                Лучший сайт на свете
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <form>
+                    <table>
+                        <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <label for="surname-input">Фамилия</label>
+                                        <input placeholder="Фамилия" id="surname-input" class="form-control">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <label for="name-input">Имя</label>
+                                        <input placeholder="Имя" id="name-input" class="form-control">
+                                    </div>
+                                </td> 
+              
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <label for="email-input">Адрес электронной почты</label>
+                                    <input placeholder="Адрес электронной почты" id="email-input" class="form-control">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <label for="password-input">Пароль</label>
+                                    <input type="password" placeholder="Пароль" id="password-input" class="form-control">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="submit" class="btn btn-primary" value="Зарегистрироваться">
+                </form>
+            </div>
+            <div class="col-4">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Время</th>
+            
+                        <th>Понедельник</th>
+                        <th>Вторник</th>
+                        <th>Среда</th>
+                        <th>Четверг</th>
+                        <th>Пятница</th>
+            
+                    </tr>
+            
+                    <tr>
+                        <td>9:00 - 9:55</td>
+            
+                        <td rowspan="2">Матан</td>
+                        <td>Прога</td>
+                        <td rowspan="2">Базы данных</td>
+                        <td>Физика</td>
+                        <td>Физ-ра</td>
+                    </tr>
+            
+                    <tr>
+                        <td>10:00 - 10:55</td>
+            
+                        <td>Психология</td>
+                        <td rowspan="2">Электротехника</td>
+                        <td>Английский</td>
+                    </tr>
+            
+                    <tr>
+                        <td>11:00 - 11:55</td>
+            
+                        <td>Физика</td>
+                        <td>Начерт</td>
+                        <td>Правоведение</td>
+                        <td>Матан</td>
+                    </tr>
+            
+                    <tr>
+                        <td>12:00 - 12:55</td>
+            
+                        <td colspan="2">Самостоятельная работа</td>
+                        <td>Электротехника</td>
+                        <td>Физика</td>
+                        <td>Начерт</td>
+                    </tr>
+            
+                    <tr>
+                        <td>13:00 - 13:55</td>
+            
+                        <td colspan="5">Самостоятельная работа</td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>
+                    <i>Lorem Ipsum</i> - это текст-"<i>рыба</i>", часто используемый в печати и вэб-дизайне. 
+                    Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
+                    В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. 
+                    Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. 
+                    Его популяризации в <s>старое</s> новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, 
+                    в более недавнее время, программы электронной вёрстки типа <i>Aldus PageMaker</i>, в шаблонах которых используется Lorem Ipsum.
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer class="my-primary">
+        <div class="container">
+            <p class="footer-text">Footer</p>
+        </div>
+    </footer>
+</body>
+
+</html>

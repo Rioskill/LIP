@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+
+    <style>
+        #table-body {
+            width: 100%;
+            font-size: 0px;
+        }
+
+        .table-row {
+            padding: 2px;
+        }
+
+        .table-cell {
+            font-size: 1rem;
+            text-align: center;
+
+            box-sizing: border-box;
+
+            width: 20%;
+            display: inline-block;
+            padding: 2px;
+            margin: 0;
+
+            border: 1px solid black;
+        }
+
+        .table-time {
+            box-sizing: border-box;
+            display: inline-block;
+
+            font-size: 1rem;
+            text-align: center;
+
+            margin: 0;
+            padding: 2px;
+
+            width: 10%;
+
+            border: 1px solid black;
+        }
+
+        .cell-container {
+
+            box-sizing: border-box;
+            display: inline-block;
+
+            width: 80%;
+        }
+
+        #free-work {
+            border: 1px solid black;
+            font-size: 1rem;
+            text-align: center;
+
+            margin: 0;
+            padding: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="table-body">
+        <div class="table-row">
+            <div class="table-time">Время</div>
+            <div class="cell-container">
+                <div class="table-cell">Понедельник</div>
+                <div class="table-cell">Вторник</div>
+                <div class="table-cell">Среда</div>
+                <div class="table-cell">Четверг</div>
+                <div class="table-cell">Пятница</div>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-time">9:00 - 9:55</div>
+            <div class="cell-container">
+                <div class="table-cell double-cell">Матан</div>
+                <div class="table-cell">Прога</div>
+                <div class="table-cell">Базы данных</div>
+                <div class="table-cell">Физика</div>
+                <div class="table-cell">Физ-ра</div>
+            </div>
+
+        </div>
+
+        <div class="table-row">
+            <div class="table-time">10:00 - 10:55</div>
+            <div class="cell-container">
+                <div class="table-cell">Матан</div>
+                <div class="table-cell">Психология</div>
+                <div class="table-cell">Базы данных</div>
+                <div class="table-cell">Электротехника</div>
+                <div class="table-cell">Английский</div>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-time">11:00 - 11:55</div>
+            <div class="cell-container">
+                <div class="table-cell">Физика</div>
+                <div class="table-cell">Начерт</div>
+                <div class="table-cell">Правоведение</div>
+                <div class="table-cell">Электротехника</div>
+                <div class="table-cell">Матан</div>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-time">12:00 - 12:55</div>
+            <div class="cell-container">
+                <div class="table-cell">Сам. работа</div>
+                <div class="table-cell">Сам. работа</div>
+                <div class="table-cell">Электротехника</div>
+                <div class="table-cell">Физика</div>
+                <div class="table-cell">Начерт</div>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-time">13:00 - 13:55</div>
+            <div class="cell-container" id="free-work">Сам. работа</div>
+        </div>
+    </div>
+</body>
+</html>

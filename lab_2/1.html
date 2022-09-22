@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 1</title>
+
+    <style>
+
+        body {
+            margin: 5%;
+        }
+
+        .heading {
+            color: limegreen;
+        }
+
+        .pallet {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 2%;
+        }
+
+        .it {
+            font-style: italic;
+        }
+
+        #old {
+            font-style: oblique;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2 class="heading">Lorem Ipsum для бедных</h2>
+
+    Что такое <span class="it">Lorem Ipsum</span>?
+    <p>
+        <i>Lorem Ipsum</i> - это текст-"<i>рыба</i>", часто используемый в печати и вэб-дизайне.
+        Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для
+        распечатки образцов.
+        Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+        Его популяризации в <span id="old"><s>старое</s></span> новое время послужили публикация листов Letraset с образцами Lorem Ipsum в
+        60-х годах и,
+        в более недавнее время, программы электронной вёрстки типа <i>Aldus PageMaker</i>, в шаблонах которых
+        используется Lorem Ipsum.
+    </p>
+    <cite>https://ru.lipsum.com/</cite>
+
+    <h3 class="heading">Самая известная формула Физики</h3>
+    <div class=pallet><var>E</var> = <var>mc<sup>2</sup></var></div>
+
+    <h3 class="heading">python'овский код для нахождения НОД</h3>
+
+    <pre class="pallet"><code>
+a = 50
+b = 130
+
+while a != 0 and b != 0:
+    if a > b:
+        a = a % b
+    else:
+        b = b % a
+        
+print(a + b)
+</code>
+</pre>
+
+</body>
+
+</html>
