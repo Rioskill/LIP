@@ -11,6 +11,9 @@
             background-color: lightblue;
         }
 
+        .selected-for-deletion {
+            background-color: #db6075;
+        }
 
     </style>
 
@@ -20,7 +23,7 @@
         <div class = "row">
             <div class = "col-6">
 
-                <table id="main_table" class="table table-bordered">
+                <table id="menu_table" class="table table-bordered">
                     <tr>
                         <th>Наименование</th>
                         <th>Стоимость</th>
@@ -43,20 +46,26 @@
                     </tr>
                 </table>  
                 
-                <div class="form-group row">
-                    <label for="name_input">Наименование</label>
-                    <input type="text" id="name_input">
+                <div class="d-flex">
+                    <div class="form-group col">
+                        <label for="name_input">Наименование</label>
+                        <input type="text" id="name_input">
+                    </div>
+    
+                    <div class="form-group col">
+                        <label for="price_input">Стоимость</label>
+                        <input type="number" id="price_input">
+                    </div>
+
+                    <div class="align-self-center">
+                        <input type="button" value="Добавить" id="submit_button" class="btn btn-outline-primary">
+                    </div>
                 </div>
 
-                <div class="form-group row">
-                    <label for="price_input">Стоимость</label>
-                    <input type="number" id="price_input">
-                </div>
 
-                <input type="button" value="Добавить" id="submit_button">
-
-                <div id="total" class="row">
-                    <input type="button" value="Итог" id="calc_button" class="col">
+                <div id="total" class="d-flex">
+                    <input type="button" value="Итог" id="calc_button" class="col-3 btn btn-outline-primary">
+                    <div id="total_price" class="col align-self-center"></div>
                 </div>
             </div>
             <div class = "col-6">
