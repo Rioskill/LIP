@@ -34,9 +34,15 @@ function calculateTotalPrice() {
         sum += parseInt(price_col.textContent);
     }
 
+
     let total_div = document.getElementById('total');
 
-    let total_price_el = document.createElement('div');
+    let total_price_el = document.getElementById('total_price');
+
+    if (total_price_el == null) {
+        total_price_el = document.createElement('div');
+        total_price_el.id = "total_price";
+    }
     total_price_el.textContent = sum;
 
     total_div.appendChild(total_price_el);
