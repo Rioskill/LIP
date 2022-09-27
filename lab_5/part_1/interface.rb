@@ -1,7 +1,9 @@
-require_relative 'main.rb'
+# frozen_string_literal: true
 
-puts 'Input 2 numbers split by space'
+require_relative 'main'
 
-a, b = gets.split.map(&:to_i)
+puts 'Input a number'
 
-puts calc(a, b)
+input = gets.to_i
+
+puts calc(input)

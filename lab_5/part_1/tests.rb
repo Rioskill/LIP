@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
-require_relative 'main.rb'
+require_relative 'main'
 
 class CalcTest < Minitest::Test
     def test_1_1

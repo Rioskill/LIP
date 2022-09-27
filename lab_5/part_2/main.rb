@@ -1,4 +1,9 @@
-def correct (string)
-    words = string.split
-    words.sort { |a, b| b.length <=> a.length }.join(' ')
+def count_students strings
+    groups = strings.map { |string| string.split[0] }
+
+    result = Hash.new { |hash, key| hash[key] = groups.count(key) }
+
+    groups.uniq.each { |group| result[group]}
+
+    result
 end
