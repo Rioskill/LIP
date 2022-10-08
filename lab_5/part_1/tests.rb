@@ -3,14 +3,20 @@
 require 'minitest/autorun'
 require_relative 'main'
 
+# tests calc method
 class CalcTest < Minitest::Test
-    def test_1_1
-        result = calc(1, 1)
-        assert result == -0.1029207153609719
-    end
+  def test1
+    result = calc(1)
+    assert_in_delta(result, -0.38542559176909813, 1e-17)
+  end
 
-    def test_4_5
-        result = calc(4, 5)
-        assert result == -0.960875916920823
-    end
+  def test4
+    result = calc(4)
+    assert_in_delta(result, 0.6639225799939713, 1e-17)
+  end
+
+  def test_negative
+    result = calc(-2)
+    assert_in_delta(result, 2.268626173928899, 1e-17)
+  end
 end

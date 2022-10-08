@@ -10,6 +10,19 @@ function makeRowSelectable(row, className) {
     });
 }
 
+function calculateTotalPrice() {
+    const price_cols = document.getElementsByClassName('price_col');
+
+    let sum = 0;
+    for (const price_col of price_cols) {
+        sum += parseInt(price_col.textContent);
+    }
+
+    let total_price_el = document.getElementById('total-price-col');
+    total_price_el.innerText = sum;
+
+}
+
 function addRow(name, price) {
     let table = document.getElementById("main_table");
 
@@ -21,6 +34,8 @@ function addRow(name, price) {
         let row = event.target.parentElement;
         
         row.remove();
+
+        calculateTotalPrice();
     });
 
     let name_col = document.createElement('td');
@@ -33,23 +48,11 @@ function addRow(name, price) {
     row.appendChild(name_col);
     row.appendChild(price_col);
 
-    table.appendChild(row);
-}
+    let total_price_row = document.getElementById('total-price-row');
 
-function calculateTotalPrice() {
-    const price_cols = document.getElementsByClassName('price_col');
+    total_price_row.parentNode.insertBefore(row, total_price_row);
 
-    let sum = 0;
-    for (const price_col of price_cols) {
-        sum += parseInt(price_col.textContent);
-    }
-
-    let total_div = document.getElementById('total');
-
-    let total_price_el = document.getElementById('total_price');
-    total_price_el.textContent = sum;
-
-    total_div.appendChild(total_price_el);
+    calculateTotalPrice();
 }
 
 function setTdsClickable() {
@@ -80,14 +83,16 @@ setTdsClickable();
 let name_input = document.getElementById('name_input');
 let price_input = document.getElementById('price_input');
 
-let submit_button = document.getElementById('submit_button');
+let submit_butotn = document.getElementById('submit_button');
 
-let total_btn = document.getElementById('calc_button');
+submit_butotn.addEventListener('click', () => {
+    const name_str = name_input.value
+    const price_str = price_input.value;
 
-submit_button.addEventListener('click', () => {
-    addRow(name_input.value, price_input.value);
-});
-
-total_btn.addEventListener('click', () => {
-    calculateTotalPrice();
+    if (!name_str.match(/\w+/))
+        alert("Пустое название");
+    else if (!price_str.match(/^\d+$/))
+        alert("Невалидная стоимость");
+    else
+        addRow(name_str, price_str);
 });
