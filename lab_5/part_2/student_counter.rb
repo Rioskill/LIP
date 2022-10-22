@@ -2,8 +2,7 @@
 
 # class containing count_students method for lab_5_part_2
 class StudentCounter
-
-  def self.get_groups  strings
+  def self.get_groups(strings)
     strings.map { |string| string.split[0] }
   end
 

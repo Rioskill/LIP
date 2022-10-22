@@ -2,23 +2,23 @@
 
 # class used to calculate sin
 class Calculator
-  def self.nth_member(x, n)
-    power = 2 * n + 1
-    (n.even? ? 1 : -1) * x**power / Math.gamma(power + 1)
+  def self.nth_member(value, order)
+    power = 2 * order + 1
+    (order.even? ? 1 : -1) * value**power / Math.gamma(power + 1)
   end
 
-  def self.sin(x)
-    n = 0
+  def self.sin(value)
+    order = 0
     result = 0
 
     loop do
-      current = nth_member(x, n)
+      current = nth_member(value, order)
 
       break if current.abs <= 1e-3
 
       result += current
 
-      n += 1
+      order += 1
     end
 
     result

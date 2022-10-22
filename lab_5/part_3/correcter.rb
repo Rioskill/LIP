@@ -9,6 +9,6 @@ class Correcter
   def self.correct(string)
     words = string.split
     selected_words = reject_forbidden_words words
-    selected_words.map { |word| word.start_with?(/\d/) ? "_#{word.slice(1..-1)}" : '' }.join ' '
+    selected_words.map { |word| word.start_with?(/\d/) ? "_#{word.slice(1..-1)}" : word }.join ' '
   end
 end

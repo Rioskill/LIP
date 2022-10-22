@@ -2,5 +2,4 @@
 
 require_relative 'calculator'
 
-input_value = gets.to_f
-p Calculator.sin(input_value)
+p Calculator.sin(gets.to_f)

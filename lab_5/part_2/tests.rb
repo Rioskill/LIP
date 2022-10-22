@@ -28,7 +28,7 @@ class CountStudentsTest < Minitest::Test
   def test_randomized
     groups = Hash[(1..5).map { [random_word(5), rand(1..10)] }]
 
-    strings = groups.map { |key, value| (1..value).map { |_| key + " #{random_word(5)}" } }.flatten
+    strings = groups.map { |key, value| (1..value).map { |_| key + " #{random_word(5)}" } }.flatten.shuffle
 
     assert StudentCounter.count_students(strings) == groups
   end

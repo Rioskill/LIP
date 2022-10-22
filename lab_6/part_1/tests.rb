@@ -11,13 +11,20 @@ describe Calculator do
   end
 
   context 'sin(-0.5)' do
+    it 'should be equal ~ Math.sin(3)' do
+      result = Calculator.sin(3)
+      expect(result).to be_within(1e-3).of(Math.sin(3))
+    end
+  end
+
+  context 'sin(3)' do
     it 'should be equal ~ -0.47942' do
       result = Calculator.sin(-0.5)
       expect(result).to be_within(1e-3).of(-0.47942)
     end
   end
 
-  context 'compare to regular sin' do
+  context 'compare to Math.sin' do
     let!(:input) { rand }
 
     it 'should be equal to Math.sin' do
