@@ -1,11 +1,14 @@
 # frozen_string_literal: true
 
-def count_students strings
-  groups = strings.map { |string| string.split[0] }
+require_relative 'student_counter'
 
-  result = Hash.new { |hash, key| hash[key] = groups.count(key) }
+strings = []
 
-  groups.uniq.each { |group| result[group]}
+loop do
+  string = gets.chomp
+  break if string.empty?
 
-  result
+  strings.push(string)
 end
+
+puts StudentCounter.count_students strings

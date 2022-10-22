@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
-def calc(x)
-  Math.tan(x**2 * (x - 2) / Math.exp(x))
-end
+require_relative 'calculator'
+
+puts 'Input a number'
+
+input = gets.to_i
+
+puts Calculator.calc(input)
