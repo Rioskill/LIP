@@ -11,6 +11,6 @@ class Calculator
 
   def self.sin(value)
     members = member(value).take_while { |val| val.abs >= 1e-4 }
-    return members.reduce(:+), members.to_a.size()
+    [members.reduce(:+), members.to_a.size]
   end
 end

@@ -89,7 +89,7 @@ submit_butotn.addEventListener('click', () => {
     const name_str = name_input.value
     const price_str = price_input.value;
 
-    if (!name_str.match(/\w+/))
+    if (!name_str)
         alert("Пустое название");
     else if (!price_str.match(/^\d+$/))
         alert("Невалидная стоимость");
