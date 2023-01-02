@@ -21,6 +21,6 @@ class Calculator
       order += 1
     end
 
-    result
+    [result, order + 1]
   end
 end
